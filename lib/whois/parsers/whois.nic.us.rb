@@ -22,11 +22,18 @@ module Whois
     #   The Example parser for the list of all available methods.
     #
     class WhoisNicUs < BaseIcannCompliant
-      # Override status to return actual EPP status codes
+      # Override status to return actual EPP status codes for registered domains
       property_supported :status do
-        Array(node("Domain Status")).map do |status|
-          # Remove the URL part if present (e.g., "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited")
-          status.split(/\s+/).first
+        if reserved?
+          :reserved
+        elsif available?
+          :available
+        else
+          # For registered domains, return array of EPP status codes
+          Array(node("Domain Status")).map do |status|
+            # Remove the URL part if present (e.g., "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited")
+            status.split(/\s+/).first
+          end
         end
       end
     end
