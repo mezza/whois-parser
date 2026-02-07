@@ -1,78 +1,63 @@
-
--------------------------------------------------------------------------------
-Com Laude registers, maintains and renews domain names around the world for
-leading intellectual property owners and the law firms that support them.
-If you have queries about this domain, you may contact us via our website
-at www.comlaude.com.
--------------------------------------------------------------------------------
-
-The data in the Com Laude Whois database is provided to assist you in obtaining
-information about a domain name registration record.  Com Laude makes this
-information available "as is," and does not guarantee its accuracy.
-By submitting a WHOIS query, you agree that you will use this data only for
-lawful purposes and that, under no circumstances will you use this data to:
-
-(1) allow, enable, or otherwise support the transmission of mass unsolicited,
-commercial advertising or solicitations via e-mail (spam), telephone or fax; or
-(2) enable high volume, automated, electronic processes that that send queries
-or data to Com Laude or the systems of any Registry Operator or ICANN-Accredited
-registrar.  The compilation, repackaging, dissemination or other use of this
-data is expressly prohibited without the prior written consent of Com Laude.
-
-Com Laude reserves the right to modify these terms at any time. By submitting
-this query, you agree to abide by these terms. If you fail to abide by this
-policy, we may terminate your access to this WHOIS database.
-
-Domain name:  comlaude.com
-Registered: 2005-01-30
-Expires:  2020-01-30
-
-Registrar:  Com Laude
-    Com Laude is a business name of Nom IQ Ltd, a UK based company.
-
-Registrant Contact:
-    Domain Manager
-    Nom-IQ Ltd dba Com Laude
-    2nd Floor, 28-30 Little Russell Street
-    London WC1A 2HN
-    United Kingdom
-    Phone: +44.2078360070
-    Email: admin@comlaude.com
-
-
-Admin Contact:
-    Domain Manager
-    Nom-IQ Ltd dba Com Laude
-    2nd Floor, 28-30 Little Russell Street
-    London WC1A 2HN
-    United Kingdom
-    Phone: +44.2078360070
-    Email: admin@comlaude.com
-
-
-Technical Contact:
-    Technical Manager
-    Com Laude
-    2nd floor, 28-30 Little Russell Street
-    London WC1A 2HN
-    London
-    United Kingdom
-    Phone: +44.2074218250
-    Fax: +44.8700118187
-    Email: hostmaster@comlaude.com
-
-
-Nameservers:
-    dns1.comlaude-dns.com
-    dns2.comlaude-dns.net
-    dns3.comlaude-dns.co.uk
-    dns4.comlaude-dns.eu
-
-
--------------------------------------------------------------------------------
-Com Laude protects intellectual property in the domain name system. Com Laude
-only registers domain names for legitimate rights owners. Should you have any
-queries about the legitimacy of this name or our work as a UK based, ICANN
-Accredited Registrar, contact us at: Com Laude, 116 Long Acre, Covent Garden,
-London WC2E 9SU, UK.  Com Laude is a business name of Nom IQ Ltd.
--------------------------------------------------------------------------------
+Domain Name: comlaude.com
+Registry Domain ID: 140988980_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.comlaude.com
+Registrar URL: https://www.comlaude.com
+Updated Date: 2025-10-08T12:44:46Z
+Creation Date: 2005-01-30T11:52:54Z
+Registrar Registration Expiration Date: 2027-01-30T00:00:00Z
+Registrar: NOM-IQ Ltd dba Com Laude
+Registrar IANA ID: 470
+Domain Status: clientDeleteProhibited https://www.icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://www.icann.org/epp#serverUpdateProhibited
+Registry Registrant ID:
+Registrant Name: Domain Manager
+Registrant Organization: Nom-IQ Ltd dba Com Laude
+Registrant Street: 28-30 Little Russell Street
+Registrant City: London
+Registrant State/Province:
+Registrant Postal Code: WC1A 2HN
+Registrant Country: GB
+Registrant Phone: +44.2074218250
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: admin@comlaude.com
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: REDACTED FOR PRIVACY
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: REDACTED FOR PRIVACY
+Admin Email: comlaude.com-Admin@anonymised.email
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: REDACTED FOR PRIVACY
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: REDACTED FOR PRIVACY
+Tech Email: comlaude.com-Tech@anonymised.email
+Name Server: dns1.comlaude-dns.com
+Name Server: dns2.comlaude-dns.net
+Name Server: dns3.comlaude-dns.co.uk
+Name Server: dns4.comlaude-dns.eu
+DNSSEC: Signed Delegation
+Registrar Abuse Contact Email: abuse@comlaude.com
+Registrar Abuse Contact Phone: +44.2074218250
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2026-02-07T14:40:42Z <<<
