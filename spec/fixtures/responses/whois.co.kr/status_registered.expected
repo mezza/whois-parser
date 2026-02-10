@@ -1,0 +1,106 @@
+#domain
+  %s == "samsung.com"
+
+#domain_id
+  %s == "1521529_DOMAIN_COM-VRSN"
+
+
+#status
+  %s == :registered
+
+#available?
+  %s == false
+
+#registered?
+  %s == true
+
+
+#created_on
+  %s %CLASS{time}
+  %s %TIME{1994-11-29 05:00:00 UTC}
+
+#updated_on
+  %s %CLASS{time}
+  %s %TIME{2021-06-12 09:11:34 UTC}
+
+#expires_on
+  %s %CLASS{time}
+  %s %TIME{2025-11-28 05:00:00 UTC}
+
+
+#registrar
+  %s %CLASS{registrar}
+  %s.id           == "100"
+  %s.name         == "Whois Corp."
+  %s.url          == "https://www.whois.co.kr"
+
+#registrant_contacts
+  %s %CLASS{array}
+  %s %SIZE{1}
+  %s[0] %CLASS{contact}
+  %s[0].type          == Whois::Parser::Contact::TYPE_REGISTRANT
+  %s[0].name          == "Samsung Electronics CO., Ltd"
+  %s[0].organization  == "Samsung Electronics CO., Ltd"
+  %s[0].address       == "129, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do,"
+  %s[0].city          == "Korea"
+  %s[0].zip           == "16677"
+  %s[0].state         == ""
+  %s[0].country_code  == "KR"
+  %s[0].phone         == "+82.27277203"
+  %s[0].fax           == ""
+  %s[0].email         == "ssdomain@samsung.com"
+
+#admin_contacts
+  %s %CLASS{array}
+  %s %SIZE{1}
+  %s[0] %CLASS{contact}
+  %s[0].type          == Whois::Parser::Contact::TYPE_ADMINISTRATIVE
+  %s[0].name          == "Samsung Electronics CO., Ltd"
+  %s[0].organization  == "Samsung Electronics CO., Ltd"
+  %s[0].address       == "129, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do,"
+  %s[0].city          == "Korea"
+  %s[0].zip           == "16677"
+  %s[0].state         == ""
+  %s[0].country_code  == "KR"
+  %s[0].phone         == "+82.27277203"
+  %s[0].fax           == ""
+  %s[0].email         == "ssdomain@samsung.com"
+
+#technical_contacts
+  %s %CLASS{array}
+  %s %SIZE{1}
+  %s[0] %CLASS{contact}
+  %s[0].type          == Whois::Parser::Contact::TYPE_TECHNICAL
+  %s[0].name          == "Samsung Electronics CO., Ltd"
+  %s[0].organization  == "Samsung Electronics CO., Ltd"
+  %s[0].address       == "129 Samsung-ro Yeongtong-gu Suwon-si Gyeonggi-do"
+  %s[0].city          == "Korea"
+  %s[0].zip           == "16677"
+  %s[0].state         == ""
+  %s[0].country_code  == "KR"
+  %s[0].phone         == "+82.27277203"
+  %s[0].fax           == ""
+  %s[0].email         == "ssdomain@samsung.com"
+
+
+#nameservers
+  %s %CLASS{array}
+  %s %SIZE{6}
+  %s[0] %CLASS{nameserver}
+  %s[0].name == "dnssm.samsung.com"
+  %s[0].ipv4 == nil
+  %s[1] %CLASS{nameserver}
+  %s[1].name == "dnsst.samsung.com"
+  %s[1].ipv4 == nil
+  %s[2] %CLASS{nameserver}
+  %s[2].name == "dnsst2.samsung.com"
+  %s[2].ipv4 == nil
+  %s[3] %CLASS{nameserver}
+  %s[3].name == "dnssm2.samsung.com"
+  %s[3].ipv4 == nil
+  %s[4] %CLASS{nameserver}
+  %s[4].name == "dns-gi1.samsung.com"
+  %s[4].ipv4 == nil
+  %s[5] %CLASS{nameserver}
+  %s[5].name == "dns-awskr1.samsung.com"
+  %s[5].ipv4 == nil
