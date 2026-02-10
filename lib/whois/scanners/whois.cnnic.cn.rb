@@ -6,6 +6,10 @@ module Whois
     # Scanner for the whois.cnnic.cn record.
     class WhoisCnnicCn < Base
 
+      def parse(content)
+        super(content.force_encoding("UTF-8"))
+      end
+
       self.tokenizers += [
           :skip_empty_line,
           :scan_reserved,
