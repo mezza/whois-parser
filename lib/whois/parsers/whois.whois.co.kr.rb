@@ -8,20 +8,20 @@
 
 
 require_relative 'base_icann_compliant'
-require 'whois/scanners/whois.co.kr'
+require 'whois/scanners/whois.whois.co.kr'
 
 
 module Whois
   class Parsers
 
-    # Parser for the whois.co.kr server.
+    # Parser for the whois.whois.co.kr server (Whois Corp. registrar).
     #
     # @see Whois::Parsers::Example
     #   The Example parser for the list of all available methods.
     #
-    class WhoisCoKr < BaseIcannCompliant
+    class WhoisWhoisCoKr < BaseIcannCompliant
 
-      self.scanner = Scanners::WhoisCoKr, {
+      self.scanner = Scanners::WhoisWhoisCoKr, {
           pattern_available: /^No Data Found/,
       }
 

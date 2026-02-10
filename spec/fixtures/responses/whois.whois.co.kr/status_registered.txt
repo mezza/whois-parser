@@ -1,0 +1,65 @@
+
+Domain Name : samsung.com
+Registry Domain ID: 1521529_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.co.kr
+Registrar URL: https://www.whois.co.kr
+Updated Date: 2025-10-22T07:00:50Z
+Creation Date: 1994-11-29T05:00:00Z
+Registrar Registration Expiration Date: 2026-11-28T05:00:00Z
+Registrar: Whois Corp.
+Registrar IANA ID: 100
+Registrar Abuse Contact Email: abuse@whois.co.kr
+Registrar Abuse Contact Phone: +82.15884259
+Reseller:
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID:
+Registrant Name: Samsung Electronics CO., Ltd
+Registrant Organization: Samsung Electronics CO., Ltd
+Registrant Street: 129, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do,
+Registrant City: Korea
+Registrant State/Province:
+Registrant Postal Code: 16677
+Registrant Country: KR
+Registrant Phone: +82.27277203
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: ssdomain@samsung.com
+Registry Admin ID:
+Admin Name: Samsung Electronics CO., Ltd
+Admin Organization: Samsung Electronics CO., Ltd
+Admin Street: 129, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do,
+Admin City: Korea
+Admin State/Province:
+Admin Postal Code: 16677
+Admin Country: KR
+Admin Phone: +82.27277203
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: ssdomain@samsung.com
+Registry Tech ID:
+Tech Name: Samsung Electronics CO., Ltd
+Tech Organization: Samsung Electronics CO., Ltd
+Tech Street: 129 Samsung-ro Yeongtong-gu Suwon-si Gyeonggi-do
+Tech City: Korea
+Tech State/Province:
+Tech Postal Code: 16677
+Tech Country: KR
+Tech Phone: +82.27277203
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: ssdomain@samsung.com
+Name Server: dnssm.samsung.com
+Name Server: dnsst.samsung.com
+Name Server: dnsst2.samsung.com
+Name Server: dnssm2.samsung.com
+Name Server: dns-gi1.samsung.com
+Name Server: dns-awskr1.samsung.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2026-02-11T01:49:09Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
