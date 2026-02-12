@@ -38,7 +38,7 @@ module Whois
           else
             Whois::Parser.bug!(ParserError, "Unknown status `#{::Regexp.last_match(1)}'.")
           end
-        elsif content_for_scanner =~ /\[State\]\s+(.+)\n/
+        elsif content_for_scanner =~ /\[(?:State|状態)\]\s+(.+)\n/
           case ::Regexp.last_match(1).split(" ").first.downcase
           when "connected", "registered"
             :registered
@@ -64,19 +64,19 @@ module Whois
 
 
       property_supported :created_on do
-        if content_for_scanner =~ /\[(?:Created on|Registered Date)\][ \t]+(.*)\n/
+        if content_for_scanner =~ /\[(?:Created on|Registered Date|登録年月日)\][ \t]+(.*)\n/
           (::Regexp.last_match(1).empty?) ? nil : parse_time(::Regexp.last_match(1), timezone: 'Asia/Tokyo')
         end
       end
 
       property_supported :updated_on do
-        if content_for_scanner =~ /\[Last Updated?\][ \t]+(.*)\n/
+        if content_for_scanner =~ /\[(?:Last Updated?|最終更新)\][ \t]+(.*)\n/
           (::Regexp.last_match(1).empty?) ? nil : parse_time(::Regexp.last_match(1), timezone: 'Asia/Tokyo')
         end
       end
 
       property_supported :expires_on do
-        if content_for_scanner =~ /\[(?:Expires on|State)\][ \t]+(.*)\n/
+        if content_for_scanner =~ /\[(?:Expires on|State|状態)\][ \t]+(.*)\n/
           (::Regexp.last_match(1).empty?) ? nil : parse_time(::Regexp.last_match(1), timezone: 'Asia/Tokyo')
         end
       end
@@ -85,24 +85,34 @@ module Whois
         name = nil
         organization = nil
         url = nil
-        
+
         if content_for_scanner =~ /\[Registrant\][ \t]+(.*)\n/
           name = ::Regexp.last_match(1)
         end
-        
+
         if content_for_scanner =~ /\[Name\][ \t]+(.*)\n/
           organization = ::Regexp.last_match(1)
         end
-        
+
         if content_for_scanner =~ /\[Web Page\][ \t]+(.*)\n/ && !::Regexp.last_match(1).strip.empty?
           url = ::Regexp.last_match(1).strip
         end
-        
+
         Parser::Registrar.new(
           id: nil,
           name: name,
           organization: organization,
           url: url
+        )
+      end
+
+      property_supported :registrant_contacts do
+        id = if content_for_scanner =~ /m\.\s+\[(?:登録担当者|Administrative Contact)\][ \t]+(.*)\n/
+               ::Regexp.last_match(1).strip
+             end
+        id.nil? || id.empty? ? nil : Parser::Contact.new(
+          type: Parser::Contact::TYPE_REGISTRANT,
+          id:   id,
         )
       end
 
