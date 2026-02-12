@@ -33,7 +33,8 @@
   %s == nil
 
 #registrant_contacts
-  %s %ERROR{AttributeNotSupported}
+  %s %CLASS{array}
+  %s == []
 
 #admin_contacts
   %s %CLASS{array}

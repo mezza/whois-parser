@@ -87,23 +87,12 @@ module Whois
         end
       end
 
-      property_not_supported :registrant_contacts do
+      property_supported :registrant_contacts do
+        build_holder_contact(Parser::Contact::TYPE_REGISTRANT)
       end
 
       property_supported :admin_contacts do
-        node("Holder") do |hash|
-          Parser::Contact.new(
-            type:         Parser::Contact::TYPE_ADMINISTRATIVE,
-            id:           hash['register number'],
-            name:         hash['name'],
-            address:      hash['address'][0],
-            zip:          hash['address'][1],
-            city:         hash['address'][2],
-            country:      hash['country'],
-            phone:        hash['phone'],
-            email:        hash['holder email']
-          )
-        end
+        build_holder_contact(Parser::Contact::TYPE_ADMINISTRATIVE)
       end
 
       property_supported :technical_contacts do
@@ -128,6 +117,25 @@ module Whois
       # NEWPROPERTY
       def reserved?
         !!content_for_scanner.match(/Domain not available/)
+      end
+
+      private
+
+      def build_holder_contact(type)
+        node("Holder") do |hash|
+          address = Array(hash['address'])
+          Parser::Contact.new(
+            type:         type,
+            id:           hash['register number'],
+            name:         hash['name'],
+            address:      address.first,
+            zip:          hash['postal'] || address[1],
+            city:         hash['city'] || address[2],
+            country:      hash['country'],
+            phone:        hash['phone'],
+            email:        hash['holder email']
+          )
+        end
       end
 
     end
