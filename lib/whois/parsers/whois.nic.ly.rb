@@ -44,19 +44,19 @@ module Whois
 
 
       property_supported :created_on do
-        if content_for_scanner =~ /Created:\s+(.*)\n/
+        if content_for_scanner =~ /Creat(?:ed|ion Date):\s+(.*)\n/
           parse_time(::Regexp.last_match(1))
         end
       end
 
       property_supported :updated_on do
-        if content_for_scanner =~ /Updated:\s+(.*)\n/
+        if content_for_scanner =~ /Updated(?: Date)?:\s+(.*)\n/
           parse_time(::Regexp.last_match(1))
         end
       end
 
       property_supported :expires_on do
-        if content_for_scanner =~ /Expired:\s+(.*)\n/
+        if content_for_scanner =~ /(?:Expired|Registry Expiry Date):\s+(.*)\n/
           parse_time(::Regexp.last_match(1))
         end
       end
@@ -66,6 +66,10 @@ module Whois
         if content_for_scanner =~ /Domain servers in listed order:\n((.+\n)+)\n/
           ::Regexp.last_match(1).split("\n").map do |name|
             Parser::Nameserver.new(:name => name.strip)
+          end
+        else
+          content_for_scanner.scan(/Name Server:\s+(\S+)\n/).flatten.map do |name|
+            Parser::Nameserver.new(:name => name.downcase)
           end
         end
       end

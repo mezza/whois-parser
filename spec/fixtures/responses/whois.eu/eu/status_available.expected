@@ -29,7 +29,8 @@
   %s == nil
 
 #registrant_contacts
-  %s %ERROR{AttributeNotSupported}
+  %s %CLASS{array}
+  %s %SIZE{0}
 
 #admin_contacts
   %s %ERROR{AttributeNotSupported}

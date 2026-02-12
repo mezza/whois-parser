@@ -1,0 +1,20 @@
+Domain Name: flicket.co.nz
+Registrar URL: https://www.key-systems.net
+Updated Date: 2026-01-26T20:05:48Z
+Creation Date: 2018-09-04T08:20:16Z
+Original Created: 2018-09-04T08:20:16Z
+Registrar: Key-Systems GmbH
+Domain Status: ok https://icann.org/epp#ok
+Name Server: ns-1178.awsdns-19.org
+Name Server: ns-141.awsdns-17.com
+Name Server: ns-1929.awsdns-49.co.uk
+Name Server: ns-655.awsdns-17.net
+DNSSEC: unsigned
+URL of the Domain Name Commission Limited Inaccuracy Complaint Form: https://dnc.org.nz/enquiry-form/
+>>> Last update of WHOIS database: 2026-02-12T18:07:26Z <<<
+
+% Terms of Use
+%
+% By submitting a WHOIS query you are entering into an agreement with Domain
+% Name Commission Ltd on the following terms and conditions, and subject to
+% all relevant .nz Policies and procedures as found at https://dnc.org.nz/.

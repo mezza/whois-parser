@@ -58,6 +58,27 @@ module Whois
       end
 
 
+      property_supported :registrant_contacts do
+        if content_for_scanner =~ /registrant:\s+(\S+)/
+          id = ::Regexp.last_match(1)
+          name = nil
+          address = nil
+
+          if content_for_scanner =~ /nic-hdl:\s+#{Regexp.escape(id)}\n((?:.+\n)*)/
+            block = ::Regexp.last_match(1)
+            name = block[/^person:\s+(.+)/, 1] || block[/^role:\s+(.+)/, 1]
+            address = block[/^address:\s+(.+)/, 1]
+          end
+
+          Parser::Contact.new(
+            type: Parser::Contact::TYPE_REGISTRANT,
+            id:   id,
+            name: name,
+            address: address,
+          )
+        end
+      end
+
       property_supported :nameservers do
         content_for_scanner.scan(/nserver:\s+(.+)\n/).flatten.map do |name|
           Parser::Nameserver.new(:name => name)

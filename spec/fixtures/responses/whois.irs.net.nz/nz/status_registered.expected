@@ -1,0 +1,28 @@
+#status
+  %s == :registered
+
+#available?
+  %s == false
+
+#registered?
+  %s == true
+
+#created_on
+  %s %CLASS{time}
+  %s %TIME{2018-09-04 08:20:16 UTC}
+
+#updated_on
+  %s %CLASS{time}
+  %s %TIME{2026-01-26 20:05:48 UTC}
+
+#nameservers
+  %s %CLASS{array}
+  %s %SIZE{4}
+  %s[0] %CLASS{nameserver}
+  %s[0].name == "ns-1178.awsdns-19.org"
+  %s[1] %CLASS{nameserver}
+  %s[1].name == "ns-141.awsdns-17.com"
+  %s[2] %CLASS{nameserver}
+  %s[2].name == "ns-1929.awsdns-49.co.uk"
+  %s[3] %CLASS{nameserver}
+  %s[3].name == "ns-655.awsdns-17.net"

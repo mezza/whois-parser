@@ -1,0 +1,41 @@
+#status
+  %s == :registered
+
+#available?
+  %s == false
+
+#registered?
+  %s == true
+
+#created_on
+  %s %CLASS{time}
+  %s %TIME{2017-08-01 00:38:25 UTC}
+
+#updated_on
+  %s %CLASS{time}
+  %s %TIME{2025-07-06 21:17:03 UTC}
+
+#expires_on
+  %s %CLASS{time}
+  %s %TIME{2026-08-01 23:59:59 UTC}
+
+#registrar
+  %s %CLASS{registrar}
+  %s.id   == "81"
+  %s.name == "Gandi SAS"
+  %s.url  == "http://www.gandi.net/"
+
+#registrant_contacts
+  %s %CLASS{array}
+  %s %SIZE{1}
+  %s[0] %CLASS{contact}
+  %s[0].type == Whois::Parser::Contact::TYPE_REGISTRANT
+  %s[0].name == "REDACTED FOR PRIVACY"
+
+#nameservers
+  %s %CLASS{array}
+  %s %SIZE{2}
+  %s[0] %CLASS{nameserver}
+  %s[0].name == "ns1.fastmailbox.com"
+  %s[1] %CLASS{nameserver}
+  %s[1].name == "ns2.fastmailbox.com"

@@ -54,6 +54,18 @@ module Whois
       end
 
 
+      property_supported :registrant_contacts do
+        if content_for_scanner =~ /Domain Owners \/ Registrant\nName:\s*(.*)\nAddress\n(.*)\n/m
+          name = ::Regexp.last_match(1).strip
+          address = ::Regexp.last_match(2).strip
+          Parser::Contact.new(
+            type: Parser::Contact::TYPE_REGISTRANT,
+            name: name.empty? ? nil : name,
+            address: address.empty? ? nil : address,
+          )
+        end
+      end
+
       property_supported :nameservers do
         content_for_scanner.scan(/Name Server:\s+(.+)\n/).flatten.map do |name|
           Parser::Nameserver.new(:name => name.chomp("."))

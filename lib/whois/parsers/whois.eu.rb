@@ -60,7 +60,22 @@ module Whois
         end
       end
 
-      property_not_supported :registrant_contacts
+      property_supported :registrant_contacts do
+        if content_for_scanner =~ /Registrant:\s((.+\n)+?)(\n|\z)/
+          lines = ::Regexp.last_match(1)
+          name = lines.slice(/Name:\s*(.*)/, 1)
+          organization = lines.slice(/Organisation:\s*(.*)/, 1)
+          # If no Name/Organisation keys, the whole block is the name (e.g. "NOT DISCLOSED!")
+          if name.nil? && organization.nil?
+            name = lines.strip.split("\n").first&.strip
+          end
+          Parser::Contact.new(
+            type:         Parser::Contact::TYPE_REGISTRANT,
+            name:         name,
+            organization: organization,
+          )
+        end
+      end
 
       property_not_supported :admin_contacts
 
