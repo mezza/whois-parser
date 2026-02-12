@@ -10,7 +10,6 @@ module Whois
           :skip_empty_line,
           :scan_available,
           :skip_lastupdate,
-          :scan_disclaimer,
           :scan_keyvalue,
       ]
 
@@ -21,12 +20,12 @@ module Whois
       end
 
       tokenizer :skip_lastupdate do
-        @input.skip(/>>>(.+?)<<<\n/)
-      end
-
-      tokenizer :scan_disclaimer do
-        if @input.match?(/^(Afilias Australia Pty Ltd)(.+)\n\n/)
-          @ast["field:disclaimer"] = _scan_lines_to_array(/(.+)(\n+)/).join("\n")
+        if @input.skip(/>>>(.+?)<<<\n/)
+          # Consume any disclaimer text that follows the last update line
+          @input.skip(/\n+/)
+          if @input.rest?
+            @ast["field:disclaimer"] = _scan_lines_to_array(/(.+)(\n+)/).join("\n")
+          end
         end
       end
     end
