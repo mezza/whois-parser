@@ -1,0 +1,25 @@
+#status
+  %s == :available
+
+#available?
+  %s == true
+
+#registered?
+  %s == false
+
+#created_on
+  %s == nil
+
+#updated_on
+  %s == nil
+
+#expires_on
+  %s == nil
+
+#registrant_contacts
+  %s %CLASS{array}
+  %s %SIZE{0}
+
+#nameservers
+  %s %CLASS{array}
+  %s %SIZE{0}
