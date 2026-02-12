@@ -78,6 +78,15 @@ module Whois
       end
 
 
+      property_supported :registrant_contacts do
+        if content_for_scanner =~ /Registrant:\s+Not shown, please visit (.+?) for webbased whois\./
+          Parser::Contact.new(
+            type: Parser::Contact::TYPE_REGISTRANT,
+            url:  ::Regexp.last_match(1),
+          )
+        end
+      end
+
       property_supported :nameservers do
         if content_for_scanner =~ /Nameservers:\s((.+\n)+)\n/
           ::Regexp.last_match(1).split("\n").map do |line|
