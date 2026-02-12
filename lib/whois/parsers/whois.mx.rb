@@ -49,14 +49,11 @@ module Whois
         end
       end
 
-      # FIXME: the response contains localized data
-      # Expiration Date: 10-may-2011
-      # Last Updated On: 15-abr-2010 <--
-      # property_supported :updated_on do
-      #   if content_for_scanner =~ /Last Updated On:\s+(.*)\n/
-      #     parse_time($1)
-      #   end
-      # end
+      property_supported :updated_on do
+        if content_for_scanner =~ /Last Updated On:\s+(.*)\n/
+          parse_time(::Regexp.last_match(1))
+        end
+      end
 
       property_supported :expires_on do
         if content_for_scanner =~ /Expiration Date:\s+(.*)\n/

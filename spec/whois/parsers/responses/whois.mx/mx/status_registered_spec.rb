@@ -24,6 +24,8 @@ describe "whois.mx", :aggregate_failures do
     expect(subject.registered?).to eq(true)
     expect(subject.created_on).to be_a(Time)
     expect(subject.created_on).to eq(DateTime.parse("2009-05-12"))
+    expect(subject.updated_on).to be_a(Time)
+    expect(subject.updated_on).to eq(DateTime.parse("2013-07-29"))
     expect(subject.expires_on).to be_a(Time)
     expect(subject.expires_on).to eq(DateTime.parse("2016-05-11"))
     expect(subject.registrant_contacts).to be_a(Array)

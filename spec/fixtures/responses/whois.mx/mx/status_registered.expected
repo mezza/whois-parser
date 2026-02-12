@@ -12,6 +12,10 @@
   %s %CLASS{time}
   %s %TIME{2009-05-12}
 
+#updated_on
+  %s %CLASS{time}
+  %s %TIME{2013-07-29}
+
 #expires_on
   %s %CLASS{time}
   %s %TIME{2016-05-11}
