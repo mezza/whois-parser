@@ -38,6 +38,12 @@ module Whois
             lines << @input[1].strip unless @input[1].strip == ""
           end
           @ast["Disclaimer"] = lines.join(" ")
+        elsif @input.match?(/^%(?! DB time)/)
+          lines = []
+          while @input.match?(/^%(?! DB time)/) && @input.scan(/%(.*)\n/) # rubocop:disable Style/WhileUntilModifier
+            lines << @input[1].strip unless @input[1].strip == ""
+          end
+          @ast["Disclaimer"] = lines.join(" ")
         end
       end
 
