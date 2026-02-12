@@ -64,12 +64,45 @@ module Whois
         end
       end
 
+      property_supported :registrant_contacts do
+        build_contact("Registrant", Parser::Contact::TYPE_REGISTRANT)
+      end
+
+      property_supported :admin_contacts do
+        build_contact("Administrative Contact", Parser::Contact::TYPE_ADMINISTRATIVE)
+      end
+
+      property_supported :technical_contacts do
+        build_contact("Technical Contact", Parser::Contact::TYPE_TECHNICAL)
+      end
+
       property_supported :nameservers do
         if content_for_scanner =~ /Name Servers:\n((.+\n)+)\n/
           ::Regexp.last_match(1).scan(/DNS:\s+(.+)\n/).flatten.map do |line|
             name, ipv4 = line.strip.split(/\s+/)
             Parser::Nameserver.new(:name => name, :ipv4 => ipv4)
           end
+        end
+      end
+
+
+      private
+
+      def build_contact(element, type)
+        if content_for_scanner =~ /#{element}:\n((\s+.+\n)+)/
+          match = ::Regexp.last_match(1)
+          name    = match[/Name:\s+(.+)/, 1]
+          city    = match[/City:\s+(.+)/, 1]
+          state   = match[/State:\s+(.+)/, 1]
+          country = match[/Country:\s+(.+)/, 1]
+
+          Parser::Contact.new(
+            type:    type,
+            name:    name,
+            city:    city,
+            state:   state,
+            country: country,
+          )
         end
       end
 
